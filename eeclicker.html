@@ -7,19 +7,25 @@
 		<title>Everybody Edits Clicker</title>
 
 		<style>
+			@font-face {
+				font-family: nfc;
+				src: url('./nokiafc22.ttf') format('truetype');
+			}
 			* {
 				color: #FDFDFD;
-				font-family: "Segoe UI";
+				font-family: nfc;
+				image-rendering: pixelated;
 			}
 			body {
 				background-color: #181818;
-				background-image: url("background.png");
+				background-image: url("eeclickertxt/background.png");
 			}
 			div#theThingYouClick {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+			user-select: none;
 			}
 			div#pointsDisplay {
             position: absolute;
@@ -28,6 +34,7 @@
             transform: translateX(-50%);
 			font-size: 36px; /* Set the font size */
             font-weight: bold; /* Make the font bold */
+			user-select: none;
 			}
 		</style>
 
@@ -53,7 +60,7 @@
 
 	<div id="theThingYouClick">
 
-	<img src="basic_gray.png" width="64" height="64" onclick="addPoints(1)">
+	<img src="eeclickertxt/basic_gray.png" width="128" height="128" onclick="addPoints(1)">
 	
 	</div>
 
