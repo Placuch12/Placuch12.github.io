@@ -21,20 +21,20 @@
 				background-image: url("eeclickertxt/background.png");
 			}
 			div#theThingYouClick {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-			user-select: none;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				user-select: none;
 			}
-			div#pointsDisplay {
-            position: absolute;
-            top: 10px; /* Adjust this value to set distance from top */
-            left: 50%;
-            transform: translateX(-50%);
-			font-size: 36px; /* Set the font size */
-            font-weight: bold; /* Make the font bold */
-			user-select: none;
+				div#pointsDisplay {
+				position: absolute;
+				top: 10px; /* Adjust this value to set distance from top */
+				left: 50%;
+				transform: translateX(-50%);
+				font-size: 36px; /* Set the font size */
+				font-weight: bold; /* Make the font bold */
+				user-select: none;
 			}
 		</style>
 
@@ -59,9 +59,7 @@
 	<body onload="initialize()">
 
 	<div id="theThingYouClick">
-
-	<img src="eeclickertxt/basic_gray.png" width="128" height="128" onclick="addPoints(1)">
-	
+		<img src="eeclickertxt/basic_gray.png" width="128" height="128" onclick="addPoints(1)" style="-webkit-user-drag: none;">
 	</div>
 
 	<div id="pointsDisplay">
