@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Tymbark Edytor Zakretki</title>
+
+		<style>
+		
+		body {
+				background-color: #99844C;
+				font-family: Arial, sans-serif;
+				background-image: url("drewno.png");
+		}
+
+		div#zakretka {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				user-select: none;
+		}
+
+		#inputField {
+            margin-top: 20px;
+            width: 80%;
+            padding: 10px;
+        }
+
+		div#centeredText {
+            text-align: center;
+            font-size: 12px;
+            color: #08140B;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+			width: 100px;
+            word-wrap: break-word;
+        }
+
+		h1, p {
+            text-align: center;
+        }
+		
+		</style>
+
+		<script>
+        function initialize() {
+            // Get the input field and the div for displaying text
+            const inputField = document.getElementById('inputField');
+            const centeredText = document.getElementById('centeredText');
+
+            // Listen for input changes
+            inputField.addEventListener('input', function() {
+                // Update the content of the div with the input field value
+                centeredText.textContent = inputField.value;
+            });
+        }
+		</script>
+	</head>
+
+	<body onload="initialize()">
+
+		<h1>Tymbark Edytor Zarketek</h1>
+		<p>Wpisz dowolny tekst i zrob zrzut ekranu skonczonej zaketki.</p>
+
+		<input type="text" id="inputField" placeholder="Wpisz tekst tutaj">
+
+		<div id="zakretka">
+			<img src="tymbark.png"  style="-webkit-user-drag: none;">
+		</div>
+
+		<div id="centeredText">
+		
+		</div>
+
+	</body>
+</html>
