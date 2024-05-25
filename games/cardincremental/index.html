@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incremental Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Incremental Game</h1>
+        <div id="point-counter-container">
+            <div id="point-counter">Points: 0</div>
+            <div id="points-per-second">Points per second: 0</div>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <p>Card 1</p>
+                <button onclick="setCardOperation(1, 'add')">Add</button>
+                <button onclick="setCardOperation(1, 'multiply')">Multiply</button>
+                <button onclick="setCardOperation(1, 'subtract')">Subtract</button>
+                <div id="card1-output">Altered by: 0</div>
+            </div>
+            <div class="card">
+                <p>Card 2</p>
+                <button onclick="setCardOperation(2, 'add')">Add</button>
+                <button onclick="setCardOperation(2, 'multiply')">Multiply</button>
+                <button onclick="setCardOperation(2, 'subtract')">Subtract</button>
+                <div id="card2-output">Altered by: 0</div>
+            </div>
+            <div class="card">
+                <p>Card 3</p>
+                <button onclick="setCardOperation(3, 'add')">Add</button>
+                <button onclick="setCardOperation(3, 'multiply')">Multiply</button>
+                <button onclick="setCardOperation(3, 'subtract')">Subtract</button>
+                <div id="card3-output">Altered by: 0</div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
