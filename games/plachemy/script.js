@@ -4,9 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let elements = {};
     let combinations = [];
-
-    // Define starting elements
     const startingElements = ["fire", "water", "earth", "air"];
+    let draggedElement = null;
 
     // Load elements and combinations from JSON files
     fetch('data/elements.json')
@@ -25,47 +24,94 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderStartingElements() {
         elementsContainer.innerHTML = '';  // Clear the container
         startingElements.forEach(element => {
-            if (elements[element]) {  // Check if the element exists in the loaded data
+            if (elements[element]) {
                 const elementDiv = document.createElement('div');
                 elementDiv.classList.add('element');
                 elementDiv.style.backgroundImage = `url('assets/${elements[element].texture}')`;
                 elementDiv.dataset.element = element;
-                elementDiv.draggable = true;  // Set draggable attribute
+                elementDiv.draggable = true;
 
                 elementsContainer.appendChild(elementDiv);
 
-                // Event listeners for drag
                 elementDiv.addEventListener('dragstart', handleDragStart);
             }
         });
     }
 
     function handleDragStart(e) {
+        draggedElement = e.target.cloneNode(true);
+        draggedElement.classList.add('dragging');
+        document.body.appendChild(draggedElement);
         e.dataTransfer.setData('text/plain', e.target.dataset.element);
-        e.dataTransfer.effectAllowed = 'move';  // Set the drag effect
+        e.dataTransfer.effectAllowed = 'move';
     }
 
     workspace.addEventListener('dragover', e => {
-        e.preventDefault();  // Allow drop
-        e.dataTransfer.dropEffect = 'move';  // Indicate that this drop is a move
+        e.preventDefault();
+        e.dataTransfer.dropEffect = 'move';
     });
 
     workspace.addEventListener('drop', e => {
         e.preventDefault();
-        const element1 = e.dataTransfer.getData('text/plain');
+        if (draggedElement) {
+            const element1 = e.dataTransfer.getData('text/plain');
+            const elementDiv = document.createElement('div');
+            elementDiv.classList.add('element');
+            elementDiv.style.backgroundImage = `url('assets/${elements[element1].texture}')`;
+            elementDiv.dataset.element = element1;
+            elementDiv.style.position = 'absolute';
+            elementDiv.style.left = `${e.clientX - workspace.getBoundingClientRect().left}px`;
+            elementDiv.style.top = `${e.clientY - workspace.getBoundingClientRect().top}px`;
+            elementDiv.draggable = true;
 
-        if (element1) {
-            const newElement = combineElements(element1);
-            if (newElement) {
-                alert(`You created ${newElement}!`);
-                addElement(newElement);
+            workspace.appendChild(elementDiv);
+            draggedElement.remove();
+            draggedElement = null;
+
+            elementDiv.addEventListener('dragstart', handleDragStartElementOnWorkspace);
+            workspace.addEventListener('mousemove', checkOverlap);
+
+            function handleDragStartElementOnWorkspace(e) {
+                e.dataTransfer.setData('text/plain', e.target.dataset.element);
+                e.dataTransfer.effectAllowed = 'move';
+            }
+
+            function checkOverlap(e) {
+                const draggedElements = Array.from(workspace.querySelectorAll('.element'));
+                if (draggedElements.length > 1) {
+                    for (let i = 0; i < draggedElements.length - 1; i++) {
+                        for (let j = i + 1; j < draggedElements.length; j++) {
+                            if (isOverlapping(draggedElements[i], draggedElements[j])) {
+                                const el1 = draggedElements[i].dataset.element;
+                                const el2 = draggedElements[j].dataset.element;
+                                const newElement = combineElements(el1, el2);
+                                if (newElement) {
+                                    alert(`You created ${newElement}!`);
+                                    addElement(newElement);
+                                    draggedElements.forEach(el => el.remove()); // Remove old elements
+                                    workspace.removeEventListener('mousemove', checkOverlap); // Stop checking for overlap
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            function isOverlapping(el1, el2) {
+                const rect1 = el1.getBoundingClientRect();
+                const rect2 = el2.getBoundingClientRect();
+                return !(rect1.right < rect2.left ||
+                    rect1.left > rect2.right ||
+                    rect1.bottom < rect2.top ||
+                    rect1.top > rect2.bottom);
             }
         }
     });
 
-    function combineElements(el1) {
+    function combineElements(el1, el2) {
         for (let combination of combinations) {
-            if (combination.elements.includes(el1)) {
+            if (combination.elements.includes(el1) && combination.elements.includes(el2)) {
                 return combination.result;
             }
         }
@@ -86,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
             elementDiv.classList.add('element');
             elementDiv.style.backgroundImage = `url('assets/${elements[element].texture}')`;
             elementDiv.dataset.element = element;
-            elementDiv.draggable = true;  // Set draggable attribute
+            elementDiv.draggable = true;
 
             elementsContainer.appendChild(elementDiv);
 
