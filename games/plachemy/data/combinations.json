@@ -1,0 +1,12 @@
+[
+    { "elements": ["fire", "water"], "result": "steam" },
+    { "elements": ["earth", "fire"], "result": "lava" },
+    { "elements": ["air", "fire"], "result": "heat" },
+    { "elements": ["fire", "fire"], "result": "energy" },
+    { "elements": ["air", "water"], "result": "rain" },
+    { "elements": ["air", "earth"], "result": "dust" },
+    { "elements": ["air", "air"], "result": "pressure" },
+    { "elements": ["earth", "water"], "result": "mud" },
+    { "elements": ["earth", "earth"], "result": "land" },  //remember, commas everywhere except for the last one
+    { "elements": ["water", "water"], "result": "sea" }
+]

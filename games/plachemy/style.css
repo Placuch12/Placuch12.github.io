@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+#game-container {
+    display: flex;
+    width: 90%;
+    height: 90%;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Element Panel Styling */
+#element-panel {
+    width: 25%;
+    border-right: 2px solid #ccc;
+    padding-right: 20px;
+}
+
+#element-panel h3 {
+    text-align: center;
+    color: #666;
+}
+
+#elements-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    overflow-y: auto;
+    height: 80%;
+}
+
+/* Styling for individual elements in the panel */
+.element {
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    cursor: pointer;
+}
+
+#workspace {
+    flex: 1;
+    border: 2px dashed #ccc;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #999;
+    font-style: italic;
+}

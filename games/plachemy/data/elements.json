@@ -1,0 +1,16 @@
+{
+    "fire": { "texture": "fire.png" },
+    "water": { "texture": "water.png" },
+    "earth": { "texture": "earth.png" },
+    "air": { "texture": "air.png" },
+    "lava": { "texture": "lava.png" },
+    "heat": { "texture": "heat.png" },
+    "energy": { "texture": "energy.png" },
+    "rain": { "texture": "rain.png" },
+    "dust": { "texture": "dust.png" },
+    "pressure": { "texture": "pressure.png" },
+    "mud": { "texture": "mud.png" },
+    "land": { "texture": "land.png" },
+    "sea": { "texture": "sea.png" },
+    "steam": { "texture": "steam.png" }
+}
