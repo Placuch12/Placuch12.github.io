@@ -13,7 +13,7 @@ body {
     display: flex;
     width: 90%;
     height: 90%;
-    background-color: #fff;
+    background-color: #efefef;
     border: 2px solid #ccc;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

@@ -30,8 +30,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 elementDiv.classList.add('element');
                 elementDiv.style.backgroundImage = `url('assets/${elements[element].texture}')`;
                 elementDiv.dataset.element = element;
+                elementDiv.draggable = true;  // Set draggable attribute
+
                 elementsContainer.appendChild(elementDiv);
 
+                // Event listeners for drag
                 elementDiv.addEventListener('dragstart', handleDragStart);
             }
         });
@@ -39,19 +42,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function handleDragStart(e) {
         e.dataTransfer.setData('text/plain', e.target.dataset.element);
+        e.dataTransfer.effectAllowed = 'move';  // Set the drag effect
     }
 
     workspace.addEventListener('dragover', e => {
-        e.preventDefault();
+        e.preventDefault();  // Allow drop
+        e.dataTransfer.dropEffect = 'move';  // Indicate that this drop is a move
     });
 
     workspace.addEventListener('drop', e => {
         e.preventDefault();
         const element1 = e.dataTransfer.getData('text/plain');
-        const element2 = e.target.dataset.element;
 
-        if (element1 && element2) {
-            const newElement = combineElements(element1, element2);
+        if (element1) {
+            const newElement = combineElements(element1);
             if (newElement) {
                 alert(`You created ${newElement}!`);
                 addElement(newElement);
@@ -59,33 +63,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    function combineElements(el1, el2) {
-        for (let combination of combinations) {
-            if ((combination.elements.includes(el1) && combination.elements.includes(el2)) &&
-                el1 !== el2) {
-                return combination.result;
-            }
-        }
-        return null;
-    }
-
-    function addElement(element) {
-        if (!elements[element]) {
-            elements[element] = { texture: `${element}.png` };
-            renderElements();
-        }
-    }
-
-    function renderElements() {
-        elementsContainer.innerHTML = '';
-        Object.keys(elements).forEach(element => {
-            const elementDiv = document.createElement('div');
-            elementDiv.classList.add('element');
-            elementDiv.style.backgroundImage = `url('assets/${elements[element].texture}')`;
-            elementDiv.dataset.element = element;
-            elementsContainer.appendChild(elementDiv);
-
-            elementDiv.addEventListener('dragstart', handleDragStart);
-        });
-    }
-});
+    function combineElements(el1) {
+        for (let combination of comb
