@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let combinations = [];
     const startingElements = ["fire", "water", "earth", "air"];
     let draggedElement = null;
+    let offsetX, offsetY;
 
     // Load elements and combinations from JSON files
     fetch('data/elements.json')
@@ -43,9 +44,14 @@ document.addEventListener('DOMContentLoaded', () => {
         draggedElement.classList.add('dragging');
         draggedElement.style.position = 'absolute';
         draggedElement.style.pointerEvents = 'none';
+
+        // Calculate and set the offset
+        const rect = e.target.getBoundingClientRect();
+        offsetX = e.clientX - rect.left;
+        offsetY = e.clientY - rect.top;
+
         document.body.appendChild(draggedElement);
 
-        // Set drag data
         e.dataTransfer.setData('text/plain', e.target.dataset.element);
         e.dataTransfer.effectAllowed = 'move';
     }
@@ -61,8 +67,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (draggedElement) {
             // Calculate position relative to workspace
             const rect = workspace.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
+            const x = e.clientX - rect.left - offsetX;
+            const y = e.clientY - rect.top - offsetY;
 
             const element1 = e.dataTransfer.getData('text/plain');
             const elementDiv = document.createElement('div');
@@ -80,44 +86,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
             elementDiv.addEventListener('dragstart', handleDragStartElementOnWorkspace);
             workspace.addEventListener('mousemove', checkOverlap);
+        }
+    });
 
-            function handleDragStartElementOnWorkspace(e) {
-                e.dataTransfer.setData('text/plain', e.target.dataset.element);
-                e.dataTransfer.effectAllowed = 'move';
-            }
+    function handleDragStartElementOnWorkspace(e) {
+        e.dataTransfer.setData('text/plain', e.target.dataset.element);
+        e.dataTransfer.effectAllowed = 'move';
+    }
 
-            function checkOverlap() {
-                const draggedElements = Array.from(workspace.querySelectorAll('.element'));
-                if (draggedElements.length > 1) {
-                    for (let i = 0; i < draggedElements.length - 1; i++) {
-                        for (let j = i + 1; j < draggedElements.length; j++) {
-                            if (isOverlapping(draggedElements[i], draggedElements[j])) {
-                                const el1 = draggedElements[i].dataset.element;
-                                const el2 = draggedElements[j].dataset.element;
-                                const newElement = combineElements(el1, el2);
-                                if (newElement) {
-                                    alert(`You created ${newElement}!`);
-                                    addElement(newElement);
-                                    draggedElements.forEach(el => el.remove()); // Remove old elements
-                                    workspace.removeEventListener('mousemove', checkOverlap); // Stop checking for overlap
-                                    break;
-                                }
-                            }
+    function checkOverlap() {
+        const draggedElements = Array.from(workspace.querySelectorAll('.element'));
+        if (draggedElements.length > 1) {
+            for (let i = 0; i < draggedElements.length - 1; i++) {
+                for (let j = i + 1; j < draggedElements.length; j++) {
+                    if (isOverlapping(draggedElements[i], draggedElements[j])) {
+                        const el1 = draggedElements[i].dataset.element;
+                        const el2 = draggedElements[j].dataset.element;
+                        const newElement = combineElements(el1, el2);
+                        if (newElement) {
+                            alert(`You created ${newElement}!`);
+                            addElement(newElement);
+                            draggedElements.forEach(el => el.remove()); // Remove old elements
+                            workspace.removeEventListener('mousemove', checkOverlap); // Stop checking for overlap
+                            break;
                         }
                     }
                 }
             }
-
-            function isOverlapping(el1, el2) {
-                const rect1 = el1.getBoundingClientRect();
-                const rect2 = el2.getBoundingClientRect();
-                return !(rect1.right < rect2.left ||
-                    rect1.left > rect2.right ||
-                    rect1.bottom < rect2.top ||
-                    rect1.top > rect2.bottom);
-            }
         }
-    });
+    }
+
+    function isOverlapping(el1, el2) {
+        const rect1 = el1.getBoundingClientRect();
+        const rect2 = el2.getBoundingClientRect();
+        return !(rect1.right < rect2.left ||
+            rect1.left > rect2.right ||
+            rect1.bottom < rect2.top ||
+            rect1.top > rect2.bottom);
+    }
 
     function combineElements(el1, el2) {
         for (let combination of combinations) {
