@@ -7,6 +7,6 @@
     { "elements": ["air", "earth"], "result": "dust" },
     { "elements": ["air", "air"], "result": "pressure" },
     { "elements": ["earth", "water"], "result": "mud" },
-    { "elements": ["earth", "earth"], "result": "land" },  //remember, commas everywhere except for the last one
+    { "elements": ["earth", "earth"], "result": "land" },
     { "elements": ["water", "water"], "result": "sea" }
 ]
