@@ -6,7 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let combinations = [];
     const startingElements = ["fire", "water", "earth", "air"];
     let draggedElement = null;
-    let offsetX, offsetY;
+    let offsetX = 0;
+    let offsetY = 0;
 
     // Load elements and combinations from JSON files
     fetch('data/elements.json')
@@ -35,25 +36,39 @@ document.addEventListener('DOMContentLoaded', () => {
                 elementsContainer.appendChild(elementDiv);
 
                 elementDiv.addEventListener('dragstart', handleDragStart);
+                elementDiv.addEventListener('dragend', handleDragEnd);
             }
         });
     }
 
     function handleDragStart(e) {
+        // Hide the original element
+        e.target.style.opacity = '0.5';
+
         draggedElement = e.target.cloneNode(true);
         draggedElement.classList.add('dragging');
         draggedElement.style.position = 'absolute';
         draggedElement.style.pointerEvents = 'none';
 
-        // Calculate and set the offset
+        // Calculate offset
         const rect = e.target.getBoundingClientRect();
         offsetX = e.clientX - rect.left;
         offsetY = e.clientY - rect.top;
 
         document.body.appendChild(draggedElement);
 
+        // Set drag data
         e.dataTransfer.setData('text/plain', e.target.dataset.element);
         e.dataTransfer.effectAllowed = 'move';
+    }
+
+    function handleDragEnd(e) {
+        // Restore the original element
+        e.target.style.opacity = '';
+        if (draggedElement) {
+            draggedElement.remove();
+            draggedElement = null;
+        }
     }
 
     workspace.addEventListener('dragover', e => {
@@ -81,10 +96,8 @@ document.addEventListener('DOMContentLoaded', () => {
             elementDiv.draggable = true;
 
             workspace.appendChild(elementDiv);
-            draggedElement.remove();
-            draggedElement = null;
-
             elementDiv.addEventListener('dragstart', handleDragStartElementOnWorkspace);
+
             workspace.addEventListener('mousemove', checkOverlap);
         }
     });
@@ -153,6 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
             elementsContainer.appendChild(elementDiv);
 
             elementDiv.addEventListener('dragstart', handleDragStart);
+            elementDiv.addEventListener('dragend', handleDragEnd);
         });
     }
 });
