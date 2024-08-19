@@ -41,7 +41,11 @@ document.addEventListener('DOMContentLoaded', () => {
     function handleDragStart(e) {
         draggedElement = e.target.cloneNode(true);
         draggedElement.classList.add('dragging');
+        draggedElement.style.position = 'absolute';
+        draggedElement.style.pointerEvents = 'none';
         document.body.appendChild(draggedElement);
+
+        // Set drag data
         e.dataTransfer.setData('text/plain', e.target.dataset.element);
         e.dataTransfer.effectAllowed = 'move';
     }
@@ -53,15 +57,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     workspace.addEventListener('drop', e => {
         e.preventDefault();
+
         if (draggedElement) {
+            // Calculate position relative to workspace
+            const rect = workspace.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
             const element1 = e.dataTransfer.getData('text/plain');
             const elementDiv = document.createElement('div');
             elementDiv.classList.add('element');
             elementDiv.style.backgroundImage = `url('assets/${elements[element1].texture}')`;
             elementDiv.dataset.element = element1;
             elementDiv.style.position = 'absolute';
-            elementDiv.style.left = `${e.clientX - workspace.getBoundingClientRect().left}px`;
-            elementDiv.style.top = `${e.clientY - workspace.getBoundingClientRect().top}px`;
+            elementDiv.style.left = `${x}px`;
+            elementDiv.style.top = `${y}px`;
             elementDiv.draggable = true;
 
             workspace.appendChild(elementDiv);
@@ -76,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 e.dataTransfer.effectAllowed = 'move';
             }
 
-            function checkOverlap(e) {
+            function checkOverlap() {
                 const draggedElements = Array.from(workspace.querySelectorAll('.element'));
                 if (draggedElements.length > 1) {
                     for (let i = 0; i < draggedElements.length - 1; i++) {
