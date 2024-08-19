@@ -3,26 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alchemy Game</title>
-    <style>
-        .unselectable {
-            -webkit-user-select: none; /* Chrome, Safari, and Opera */
-            -moz-user-select: none;    /* Firefox */
-            -ms-user-select: none;     /* Internet Explorer/Edge */
-            user-select: none;         /* Non-prefixed version, currently supported by Chrome, Opera, and Edge */
-        }
-        /* Additional styles for the combination panel */
-        #combination-panel {
-            border: 1px solid #ccc;
-            padding: 20px;
-            position: relative;
-        }
-    </style>
+    <title>Plachemy</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="combination-panel">
-        <p class="unselectable">Drag elements here to combine</p>
-        <!-- Combination panel content here -->
+    <div id="game-container">
+        <!-- Element Inventory/Panel -->
+        <div id="element-panel">
+            <h3>Elements</h3>
+            <div id="elements-container"></div>
+        </div>
+        <div id="workspace">
+            <p>Drag elements here to combine</p>
+        </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
