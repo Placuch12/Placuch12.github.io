@@ -19,6 +19,9 @@ async function fetchData() {
         elementsData = await elementsResponse.json();
         combinationsData = await combinationsResponse.json();
 
+        console.log("Elements loaded: ", elementsData);  // Log elements data
+        console.log("Combinations loaded: ", combinationsData);  // Log combinations data
+
         updateProgress();  // Initial progress update
         renderElements();
     } catch (error) {
@@ -30,6 +33,7 @@ async function fetchData() {
 function renderElements() {
     elementContainer.innerHTML = '';
     unlockedElements.forEach(element => {
+        console.log("Rendering element: ", element);  // Log each rendering element
         const elementDiv = document.createElement('div');
         elementDiv.classList.add('element');
         elementDiv.innerHTML = `<img src="assets/${elementsData[element].texture}" alt="${element}" title="${element}">`;  // Title for hover
