@@ -8,5 +8,10 @@
     { "elements": ["air", "air"], "result": "pressure" },
     { "elements": ["earth", "water"], "result": "mud" },
     { "elements": ["earth", "earth"], "result": "land" },
-    { "elements": ["water", "water"], "result": "sea" }
+    { "elements": ["water", "water"], "result": "sea" },
+    { "elements": ["lava", "air"], "result": "stone" },
+    { "elements": ["water", "dust"], "result": "clay" },
+    { "elements": ["fire", "clay"], "result": "brick" },
+    { "elements": ["rain", "earth"], "result": "plant" },
+    { "elements": ["rain", "energy"], "result": "storm" }
 ]

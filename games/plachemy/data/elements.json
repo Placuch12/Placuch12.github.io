@@ -12,5 +12,10 @@
     "mud": { "texture": "mud.png" },
     "land": { "texture": "land.png" },
     "sea": { "texture": "sea.png" },
-    "steam": { "texture": "steam.png" }
+    "steam": { "texture": "steam.png" },
+    "storm": { "texture": "storm.png" },
+    "clay": { "texture": "clay.png" },
+    "brick": { "texture": "brick.png" },
+    "plant": { "texture": "plant.png" },
+    "stone": { "texture": "stone.png" }
 }
