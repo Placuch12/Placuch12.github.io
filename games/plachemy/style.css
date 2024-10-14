@@ -37,7 +37,7 @@ button {
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
-    background-color: #f0f0f0;
+    background-color: #ff00f0;
     height: 50%;  /* Ensure this gives space for the elements */
     overflow-y: auto;  /* Allow scrolling if needed */
 }
