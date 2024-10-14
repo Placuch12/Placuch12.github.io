@@ -57,7 +57,7 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: #f4f4f4;
     border: 1px solid #ccc;
     cursor: pointer;
 }
