@@ -31,6 +31,7 @@ body {
     width: 100px; /* Increased width for images inside circles */
     height: 100px; /* Increased height for images inside circles */
     object-fit: contain; /* Keep the aspect ratio */
+    image-rendering: pixelated;
 }
 
 
