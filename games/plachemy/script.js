@@ -2,6 +2,7 @@ const elementContainer = document.getElementById('elementContainer');
 const element1Display = document.getElementById('element1');
 const element2Display = document.getElementById('element2');
 const combineBtn = document.getElementById('combineBtn');
+const resultText = document.getElementById('resultText');  // For displaying combination result
 
 let unlockedElements = ["fire", "water", "earth", "air"];  // Starting with the basic elements
 let selectedElement1 = null;
@@ -29,7 +30,7 @@ function renderElements() {
     unlockedElements.forEach(element => {
         const elementDiv = document.createElement('div');
         elementDiv.classList.add('element');
-        elementDiv.innerHTML = `<img src="assets/${elementsData[element].texture}" alt="${element}">`;
+        elementDiv.innerHTML = `<img src="assets/${elementsData[element].texture}" alt="${element}" title="${element}">`;  // Title for hover
         elementDiv.onclick = () => selectElement(element);
         elementContainer.appendChild(elementDiv);
     });
@@ -51,17 +52,20 @@ combineBtn.onclick = () => {
     if (selectedElement1 && selectedElement2) {
         // Find combination
         const combination = combinationsData.find(combo => {
-            return (combo.elements[0] === selectedElement1 && combo.elements[1] === selectedElement2) || (combo.elements[0] === selectedElement2 && combo.elements[1] === selectedElement1);
+            return (combo.elements[0] === selectedElement1 && combo.elements[1] === selectedElement2) ||
+                   (combo.elements[0] === selectedElement2 && combo.elements[1] === selectedElement1);
         });
 
         if (combination) {
             // Unlock the new element if not already unlocked
             if (!unlockedElements.includes(combination.result)) {
                 unlockedElements.push(combination.result);
-                console.log(`New element unlocked: ${combination.result}`);
+                resultText.textContent = `New element unlocked: ${combination.result}`;
+            } else {
+                resultText.textContent = `Combination result: ${combination.result}`;
             }
         } else {
-            console.log('No valid combination found.');
+            resultText.textContent = 'No valid combination found.';
         }
 
         // Clear selections no matter what
