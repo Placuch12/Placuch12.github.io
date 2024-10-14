@@ -65,11 +65,9 @@ combineBtn.onclick = () => {
                    (combo.elements[0] === selectedElement2 && combo.elements[1] === selectedElement1);
         });
 
-        if (combination) {
+        if (combination && !unlockedElements.includes(combination.result)) {
             // Unlock the new element if not already unlocked
-            if (!unlockedElements.includes(combination.result)) {
-                unlockedElements.push(combination.result);
-            }
+            unlockedElements.push(combination.result);
             updateProgress();  // Update progress when a new element is unlocked
         }
 
