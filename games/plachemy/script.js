@@ -19,9 +19,6 @@ async function fetchData() {
         elementsData = await elementsResponse.json();
         combinationsData = await combinationsResponse.json();
 
-        console.log("Elements loaded: ", elementsData);  // Log elements data
-        console.log("Combinations loaded: ", combinationsData);  // Log combinations data
-
         updateProgress();  // Initial progress update
         renderElements();
     } catch (error) {
@@ -33,7 +30,6 @@ async function fetchData() {
 function renderElements() {
     elementContainer.innerHTML = '';
     unlockedElements.forEach(element => {
-        console.log("Rendering element: ", element);  // Log each rendering element
         const elementDiv = document.createElement('div');
         elementDiv.classList.add('element');
         elementDiv.innerHTML = `<img src="assets/${elementsData[element].texture}" alt="${element}" title="${element}">`;  // Title for hover
@@ -53,10 +49,10 @@ function updateProgress() {
 function selectElement(element) {
     if (!selectedElement1) {
         selectedElement1 = element;
-        element1Display.textContent = element;
+        element1Display.innerHTML = `<img src="assets/${elementsData[element].texture}" alt="${element}" title="${element}">`;  // Show image
     } else if (!selectedElement2) {
         selectedElement2 = element;
-        element2Display.textContent = element;
+        element2Display.innerHTML = `<img src="assets/${elementsData[element].texture}" alt="${element}" title="${element}">`;  // Show image
     }
 }
 
@@ -78,8 +74,8 @@ combineBtn.onclick = () => {
         // Clear selections no matter what
         selectedElement1 = null;
         selectedElement2 = null;
-        element1Display.textContent = 'Element 1';
-        element2Display.textContent = 'Element 2';
+        element1Display.innerHTML = 'Element 1';  // Reset display
+        element2Display.innerHTML = 'Element 2';  // Reset display
 
         // Re-render elements
         renderElements();
