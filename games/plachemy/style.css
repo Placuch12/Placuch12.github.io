@@ -65,7 +65,7 @@ button {
 }
 
 .element img {
-    width: 100%;  /* Scales to fit container */
-    height: 100%;
+    width: 400%;  /* Scales to fit container */
+    height: 400%;
     image-rendering: pixelated;  /* Keeps pixel art look */
 }
