@@ -67,7 +67,7 @@ combineBtn.onclick = () => {
         selectedElement1 = null;
         selectedElement2 = null;
         element1Display.innerHTML = ' ';
-        element1Display.innerHTML = ' ';
+        element2Display.innerHTML = ' ';
 
         renderElements();
     }
