@@ -74,8 +74,6 @@ combineBtn.onclick = () => {
         // Clear selections no matter what
         selectedElement1 = null;
         selectedElement2 = null;
-        element1Display.innerHTML = ' ';  // Reset display
-        element2Display.innerHTML = ' ';  // Reset display
 
         // Re-render elements
         renderElements();
