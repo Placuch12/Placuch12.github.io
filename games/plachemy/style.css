@@ -16,8 +16,8 @@ body {
 }
 
 .circle {
-    width: 100px;
-    height: 100px;
+    width: 120px; /* Increased width */
+    height: 120px; /* Increased height */
     border-radius: 50%;
     background-color: lightgray;
     display: flex;
@@ -26,6 +26,13 @@ body {
     font-size: 18px;
     margin: 0 20px;
 }
+
+.circle img {
+    width: 80px; /* Set width for images inside circles */
+    height: 80px; /* Set height for images inside circles */
+    object-fit: contain; /* Keep the aspect ratio */
+}
+
 
 button {
     font-size: 24px;
