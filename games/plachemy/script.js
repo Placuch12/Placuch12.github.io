@@ -3,6 +3,7 @@ const element1Display = document.getElementById('element1');
 const element2Display = document.getElementById('element2');
 const combineBtn = document.getElementById('combineBtn');
 const resultText = document.getElementById('resultText');  // For displaying combination result
+const progressDisplay = document.getElementById('progressDisplay');  // For displaying progress
 
 let unlockedElements = ["fire", "water", "earth", "air"];  // Starting with the basic elements
 let selectedElement1 = null;
@@ -18,6 +19,8 @@ async function fetchData() {
         const combinationsResponse = await fetch('data/combinations.json');
         elementsData = await elementsResponse.json();
         combinationsData = await combinationsResponse.json();
+
+        updateProgress();  // Initial progress update
         renderElements();
     } catch (error) {
         console.error("Error loading JSON data: ", error);
@@ -34,6 +37,13 @@ function renderElements() {
         elementDiv.onclick = () => selectElement(element);
         elementContainer.appendChild(elementDiv);
     });
+}
+
+// Update progress display
+function updateProgress() {
+    const totalElements = Object.keys(elementsData).length;
+    const unlockedCount = unlockedElements.length;
+    progressDisplay.textContent = `Elements: ${unlockedCount}/${totalElements}`;
 }
 
 // Select element
@@ -64,6 +74,7 @@ combineBtn.onclick = () => {
             } else {
                 resultText.textContent = `Combination result: ${combination.result}`;
             }
+            updateProgress();  // Update progress when a new element is unlocked
         } else {
             resultText.textContent = 'No valid combination found.';
         }
