@@ -2,7 +2,6 @@ const elementContainer = document.getElementById('elementContainer');
 const element1Display = document.getElementById('element1');
 const element2Display = document.getElementById('element2');
 const combineBtn = document.getElementById('combineBtn');
-const resultText = document.getElementById('resultText');  // For displaying combination result
 const progressDisplay = document.getElementById('progressDisplay');  // For displaying progress
 
 let unlockedElements = ["fire", "water", "earth", "air"];  // Starting with the basic elements
@@ -70,13 +69,8 @@ combineBtn.onclick = () => {
             // Unlock the new element if not already unlocked
             if (!unlockedElements.includes(combination.result)) {
                 unlockedElements.push(combination.result);
-                resultText.textContent = `New element unlocked: ${combination.result}`;
-            } else {
-                resultText.textContent = `Combination result: ${combination.result}`;
             }
             updateProgress();  // Update progress when a new element is unlocked
-        } else {
-            resultText.textContent = 'No valid combination found.';
         }
 
         // Clear selections no matter what

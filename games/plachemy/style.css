@@ -69,10 +69,3 @@ button {
     height: 100%;
     image-rendering: pixelated;  /* Keeps pixel art look */
 }
-
-#resultText {
-    font-size: 18px;
-    margin-top: 20px;
-    text-align: center;
-    color: #333;
-}
