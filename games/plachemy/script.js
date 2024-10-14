@@ -49,20 +49,29 @@ function selectElement(element) {
 // Combine elements
 combineBtn.onclick = () => {
     if (selectedElement1 && selectedElement2) {
+        // Find combination
         const combination = combinationsData.find(combo => {
-            return combo.elements.includes(selectedElement1) && combo.elements.includes(selectedElement2);
+            return combo.elements.includes(selectedElement1) && combo.elements.includes(selectedElement2) ||
+                   combo.elements.includes(selectedElement2) && combo.elements.includes(selectedElement1);
         });
 
-        if (combination && !unlockedElements.includes(combination.result)) {
-            unlockedElements.push(combination.result);
+        if (combination) {
+            // Unlock the new element if not already unlocked
+            if (!unlockedElements.includes(combination.result)) {
+                unlockedElements.push(combination.result);
+                console.log(`New element unlocked: ${combination.result}`);
+            }
+        } else {
+            console.log('No valid combination found.');
         }
 
-        // Clear selections
+        // Clear selections no matter what
         selectedElement1 = null;
         selectedElement2 = null;
         element1Display.textContent = 'Element 1';
         element2Display.textContent = 'Element 2';
 
+        // Re-render elements
         renderElements();
     }
 };
