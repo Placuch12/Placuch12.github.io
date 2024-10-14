@@ -45,10 +45,10 @@ function updateProgress() {
 function selectElement(element) {
     if (!selectedElement1) {
         selectedElement1 = element;
-        element1Display.innerHTML = `<img src="assets/${elementsData[element].texture}" alt="${element}" title="${element}" style="width: 120px; height: 120px; object-fit: contain;">`;  // Show larger image
+        element1Display.innerHTML = `<img src="assets/${elementsData[element].texture}" alt="${element}" title="${element}" style="width: 120px; height: 120px; object-fit: contain;">`;
     } else if (!selectedElement2) {
         selectedElement2 = element;
-        element2Display.innerHTML = `<img src="assets/${elementsData[element].texture}" alt="${element}" title="${element}" style="width: 120px; height: 120px; object-fit: contain; image-rendering: pixelated;">`;  // Show larger image
+        element2Display.innerHTML = `<img src="assets/${elementsData[element].texture}" alt="${element}" title="${element}" style="width: 120px; height: 120px; object-fit: contain; image-rendering: pixelated;">`;
     }
 }
 

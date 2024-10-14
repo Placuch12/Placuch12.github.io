@@ -14,5 +14,7 @@
     { "elements": ["fire", "clay"], "result": "brick" },
     { "elements": ["rain", "earth"], "result": "plant" },
     { "elements": ["plant", "mud"], "result": "swamp" },
+    { "elements": ["sea", "sea"], "result": "ocean" },
+    { "elements": ["swamp", "energy"], "result": "life" },
     { "elements": ["rain", "energy"], "result": "storm" }
 ]
