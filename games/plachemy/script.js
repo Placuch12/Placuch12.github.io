@@ -49,10 +49,10 @@ function updateProgress() {
 function selectElement(element) {
     if (!selectedElement1) {
         selectedElement1 = element;
-        element1Display.innerHTML = `<img src="assets/${elementsData[element].texture}" alt="${element}" title="${element}">`;  // Show image
+        element1Display.innerHTML = `<img src="assets/${elementsData[element].texture}" alt="${element}" title="${element}" style="width: 120px; height: 120px; object-fit: contain;">`;  // Show larger image
     } else if (!selectedElement2) {
         selectedElement2 = element;
-        element2Display.innerHTML = `<img src="assets/${elementsData[element].texture}" alt="${element}" title="${element}">`;  // Show image
+        element2Display.innerHTML = `<img src="assets/${elementsData[element].texture}" alt="${element}" title="${element}" style="width: 120px; height: 120px; object-fit: contain;">`;  // Show larger image
     }
 }
 
@@ -74,8 +74,8 @@ combineBtn.onclick = () => {
         // Clear selections no matter what
         selectedElement1 = null;
         selectedElement2 = null;
-        element1Display.innerHTML = 'Element 1';  // Reset display
-        element2Display.innerHTML = 'Element 2';  // Reset display
+        element1Display.innerHTML = ' ';  // Reset display
+        element2Display.innerHTML = ' ';  // Reset display
 
         // Re-render elements
         renderElements();

@@ -28,8 +28,8 @@ body {
 }
 
 .circle img {
-    width: 80px; /* Set width for images inside circles */
-    height: 80px; /* Set height for images inside circles */
+    width: 100px; /* Increased width for images inside circles */
+    height: 100px; /* Increased height for images inside circles */
     object-fit: contain; /* Keep the aspect ratio */
 }
 
@@ -44,7 +44,7 @@ button {
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
-    background-color: #f0f0f0;
+    background-color: #ff00f0;
     height: 50%;  /* Ensure this gives space for the elements */
     overflow-y: auto;  /* Allow scrolling if needed */
 }
