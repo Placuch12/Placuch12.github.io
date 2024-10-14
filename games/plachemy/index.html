@@ -7,16 +7,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="game-container">
-        <!-- Element Inventory/Panel -->
-        <div id="element-panel">
-            <h3>Elements</h3>
-            <div id="elements-container"></div>
-        </div>
-        <div id="workspace">
-            <p>Drag elements here to combine</p>
-        </div>
+    <div class="combiner">
+        <div class="circle" id="element1">Element 1</div>
+        <button id="combineBtn">+</button>
+        <div class="circle" id="element2">Element 2</div>
     </div>
+    <div class="element-container" id="elementContainer"></div>
+
+    <script src="data/elements.json"></script>
+    <script src="data/combinations.json"></script>
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,60 +1,60 @@
 body {
     font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
     margin: 0;
     padding: 0;
+}
+
+.combiner {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
+    margin: 20px 0;
 }
 
-#game-container {
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: lightgray;
     display: flex;
-    width: 90%;
-    height: 90%;
-    background-color: #ffefef;
-    border: 2px solid #cccccc;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Element Panel Styling */
-#element-panel {
-    width: 25%;
-    border-right: 2px solid #ccc;
-    padding-right: 20px;
-}
-
-#element-panel h3 {
-    text-align: center;
-    color: #666;
-}
-
-#elements-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    justify-content: center;
     align-items: center;
-    overflow-y: auto;
-    height: 80%;
+    font-size: 18px;
+    margin: 0 20px;
 }
 
-/* Styling for individual elements in the panel */
+button {
+    font-size: 24px;
+    padding: 10px 20px;
+}
+
+.element-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+    height: 50%;
+    overflow-y: auto;
+}
+
 .element {
-    width: 50px;
-    height: 50px;
-    background-size: cover;
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #ccc;
     cursor: pointer;
 }
 
-#workspace {
-    flex: 1;
-    border: 2px dashed #ccc;
-    margin-left: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #999;
-    font-style: italic;
+.element img {
+    max-width: 100%;
+    max-height: 100%;
 }
