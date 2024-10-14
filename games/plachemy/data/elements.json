@@ -17,5 +17,6 @@
     "clay": { "texture": "clay.png" },
     "brick": { "texture": "brick.png" },
     "plant": { "texture": "plant.png" },
+    "swamp": { "texture": "swamp.png" },
     "stone": { "texture": "stone.png" }
 }
