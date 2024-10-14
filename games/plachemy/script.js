@@ -3,24 +3,25 @@ const element1Display = document.getElementById('element1');
 const element2Display = document.getElementById('element2');
 const combineBtn = document.getElementById('combineBtn');
 
-let elements = ["fire", "water", "earth", "air"];
-let unlockedElements = [...elements];  // Start with basic elements
+let unlockedElements = ["fire", "water", "earth", "air"];  // Starting with the basic elements
 let selectedElement1 = null;
 let selectedElement2 = null;
 
-// Load elements from elements.json (in practice, you might fetch or import this JSON)
-const elementData = {
-    "fire": { "texture": "fire.png" },
-    "water": { "texture": "water.png" },
-    "earth": { "texture": "earth.png" },
-    "air": { "texture": "air.png" },
-};
+let elementsData = {};  // Will hold elements from elements.json
+let combinationsData = [];  // Will hold combinations from combinations.json
 
-// Load combinations from combinations.json
-const combinationsData = [
-    { "elements": ["fire", "water"], "result": "steam" },
-    { "elements": ["earth", "water"], "result": "mud" }
-];
+// Fetch elements.json and combinations.json
+async function fetchData() {
+    try {
+        const elementsResponse = await fetch('data/elements.json');
+        const combinationsResponse = await fetch('data/combinations.json');
+        elementsData = await elementsResponse.json();
+        combinationsData = await combinationsResponse.json();
+        renderElements();
+    } catch (error) {
+        console.error("Error loading JSON data: ", error);
+    }
+}
 
 // Display unlocked elements
 function renderElements() {
@@ -28,7 +29,7 @@ function renderElements() {
     unlockedElements.forEach(element => {
         const elementDiv = document.createElement('div');
         elementDiv.classList.add('element');
-        elementDiv.innerHTML = `<img src="assets/${elementData[element].texture}" alt="${element}">`;
+        elementDiv.innerHTML = `<img src="assets/${elementsData[element].texture}" alt="${element}">`;
         elementDiv.onclick = () => selectElement(element);
         elementContainer.appendChild(elementDiv);
     });
@@ -66,5 +67,5 @@ combineBtn.onclick = () => {
     }
 };
 
-// Initial rendering
-renderElements();
+// Initial fetching of data
+fetchData();
