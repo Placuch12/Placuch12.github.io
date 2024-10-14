@@ -51,8 +51,8 @@ combineBtn.onclick = () => {
     if (selectedElement1 && selectedElement2) {
         // Find combination
         const combination = combinationsData.find(combo => {
-            return combo.elements.includes(selectedElement1) && combo.elements.includes(selectedElement2) ||
-                   combo.elements.includes(selectedElement2) && combo.elements.includes(selectedElement1);
+            return (combo.elements[0] === selectedElement1 && combo.elements[1] === selectedElement2) ||
+            (combo.elements[0] === selectedElement2 && combo.elements[1] === selectedElement1);
         });
 
         if (combination) {
