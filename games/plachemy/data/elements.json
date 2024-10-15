@@ -38,5 +38,7 @@
     "big": { "texture": "big.png" },
     "tree": { "texture": "tree.png" },
     "tool": { "texture": "tool.png" },
+    "axe": { "texture": "axe.png" },
+    "wood": { "texture": "wood.png" },
     "stone": { "texture": "stone.png" }
 }

@@ -37,5 +37,7 @@
     { "elements": ["sun", "philosophy"], "result": "big" },
     { "elements": ["big", "plant"], "result": "tree" },
     { "elements": ["human", "stone"], "result": "tool" },
+    { "elements": ["tool", "tree"], "result": "axe" },
+    { "elements": ["axe", "tree"], "result": "wood" },
     { "elements": ["rain", "energy"], "result": "storm" }
 ]
