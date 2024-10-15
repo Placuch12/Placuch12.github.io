@@ -29,5 +29,7 @@
     { "elements": ["sand", "plant"], "result": "cactus" },
     { "elements": ["desert", "plant"], "result": "cactus" },
     { "elements": ["human", "nature"], "result": "philosophy" },
+    { "elements": ["sand", "glass"], "result": "hour glass" },
+    { "elements": ["hour glass", "philosophy"], "result": "time" },
     { "elements": ["rain", "energy"], "result": "storm" }
 ]

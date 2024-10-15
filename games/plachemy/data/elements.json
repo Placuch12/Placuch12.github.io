@@ -31,5 +31,6 @@
     "cactus": { "texture": "cactus.png" },
     "philosophy": { "texture": "brain.png" },
     "hour glass": { "texture": "hourglass.png" },
+    "time": { "texture": "clock.png" },
     "stone": { "texture": "stone.png" }
 }
