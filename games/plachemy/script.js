@@ -79,6 +79,8 @@ clearBtn.onclick = () => {
     selectedElement2 = null;
     element1Display.innerHTML = ' ';
     element2Display.innerHTML = ' ';
-}
+
+    renderElements();
+};
 
 fetchData();
