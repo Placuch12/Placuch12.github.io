@@ -11,11 +11,18 @@
     { "elements": ["water", "water"], "result": "sea" },
     { "elements": ["lava", "air"], "result": "stone" },
     { "elements": ["water", "dust"], "result": "clay" },
+    { "elements": ["mud", "dust"], "result": "clay" },
     { "elements": ["fire", "clay"], "result": "brick" },
     { "elements": ["rain", "earth"], "result": "plant" },
     { "elements": ["plant", "mud"], "result": "swamp" },
     { "elements": ["sea", "sea"], "result": "ocean" },
     { "elements": ["swamp", "energy"], "result": "life" },
     { "elements": ["stone", "air"], "result": "sand" },
+    { "elements": ["sand", "fire"], "result": "glass" },
+    { "elements": ["earth", "life"], "result": "animal" },
+    { "elements": ["animal", "plant"], "result": "nature" },
+    { "elements": ["brick", "brick"], "result": "wall" },
+    { "elements": ["wall", "wall"], "result": "house" },
+    { "elements": ["house", "life"], "result": "human" },
     { "elements": ["rain", "energy"], "result": "storm" }
 ]

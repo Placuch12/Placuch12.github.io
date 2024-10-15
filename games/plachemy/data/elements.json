@@ -21,5 +21,11 @@
     "ocean": { "texture": "ocean.png" },
     "life": { "texture": "life.png" },
     "sand": { "texture": "sand.png" },
+    "glass": { "texture": "glass.png" },
+    "animal": { "texture": "animal.png" },
+    "nature": { "texture": "nature.png" },
+    "wall": { "texture": "wall.png" },
+    "house": { "texture": "house.png" },
+    "human": { "texture": "human.png" },
     "stone": { "texture": "stone.png" }
 }
