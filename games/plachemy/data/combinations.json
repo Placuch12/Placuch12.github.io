@@ -24,5 +24,9 @@
     { "elements": ["brick", "brick"], "result": "wall" },
     { "elements": ["wall", "wall"], "result": "house" },
     { "elements": ["house", "life"], "result": "human" },
+    { "elements": ["sand", "sand"], "result": "desert" },
+    { "elements": ["sand", "land"], "result": "desert" },
+    { "elements": ["sand", "plant"], "result": "cactus" },
+    { "elements": ["desert", "plant"], "result": "cactus" },
     { "elements": ["rain", "energy"], "result": "storm" }
 ]

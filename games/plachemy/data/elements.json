@@ -27,5 +27,7 @@
     "wall": { "texture": "wall.png" },
     "house": { "texture": "house.png" },
     "human": { "texture": "human.png" },
+    "desert": { "texture": "desert.png" },
+    "cactus": { "texture": "cactus.png" },
     "stone": { "texture": "stone.png" }
 }
