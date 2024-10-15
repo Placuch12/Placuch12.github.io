@@ -30,7 +30,13 @@
     "desert": { "texture": "desert.png" },
     "cactus": { "texture": "cactus.png" },
     "philosophy": { "texture": "brain.png" },
-    "hour glass": { "texture": "hourglass.png" },
+    "hourglass": { "texture": "hourglass.png" },
     "time": { "texture": "clock.png" },
+    "cloud": { "texture": "cloud.png" },
+    "sky": { "texture": "sky.png" },
+    "sun": { "texture": "sun.png" },
+    "big": { "texture": "big.png" },
+    "tree": { "texture": "tree.png" },
+    "tool": { "texture": "tool.png" },
     "stone": { "texture": "stone.png" }
 }

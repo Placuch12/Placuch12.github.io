@@ -29,7 +29,13 @@
     { "elements": ["sand", "plant"], "result": "cactus" },
     { "elements": ["desert", "plant"], "result": "cactus" },
     { "elements": ["human", "nature"], "result": "philosophy" },
-    { "elements": ["sand", "glass"], "result": "hour glass" },
-    { "elements": ["hour glass", "philosophy"], "result": "time" },
+    { "elements": ["sand", "glass"], "result": "hourglass" },
+    { "elements": ["hourglass", "philosophy"], "result": "time" },
+    { "elements": ["steam", "air"], "result": "cloud" },
+    { "elements": ["cloud", "cloud"], "result": "sky" },
+    { "elements": ["sky", "fire"], "result": "sun" },
+    { "elements": ["sun", "philosophy"], "result": "big" },
+    { "elements": ["big", "plant"], "result": "tree" },
+    { "elements": ["human", "stone"], "result": "tool" },
     { "elements": ["rain", "energy"], "result": "storm" }
 ]
