@@ -16,5 +16,6 @@
     { "elements": ["plant", "mud"], "result": "swamp" },
     { "elements": ["sea", "sea"], "result": "ocean" },
     { "elements": ["swamp", "energy"], "result": "life" },
+    { "elements": ["stone", "air"], "result": "sand" },
     { "elements": ["rain", "energy"], "result": "storm" }
 ]

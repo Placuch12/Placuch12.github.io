@@ -2,6 +2,7 @@ const elementContainer = document.getElementById('elementContainer');
 const element1Display = document.getElementById('element1');
 const element2Display = document.getElementById('element2');
 const combineBtn = document.getElementById('combineBtn');
+const clearBtn = document.getElementById('clearBtn');
 const progressDisplay = document.getElementById('progressDisplay');
 
 let unlockedElements = ["fire", "water", "earth", "air"];
@@ -72,5 +73,12 @@ combineBtn.onclick = () => {
         renderElements();
     }
 };
+
+clearBtn.onclick = () => {
+    selectedElement1 = null;
+    selectedElement2 = null;
+    element1Display.innerHTML = ' ';
+    element2Display.innerHTML = ' ';
+}
 
 fetchData();
