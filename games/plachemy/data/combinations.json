@@ -28,5 +28,6 @@
     { "elements": ["sand", "land"], "result": "desert" },
     { "elements": ["sand", "plant"], "result": "cactus" },
     { "elements": ["desert", "plant"], "result": "cactus" },
+    { "elements": ["human", "nature"], "result": "philosophy" },
     { "elements": ["rain", "energy"], "result": "storm" }
 ]

@@ -29,5 +29,7 @@
     "human": { "texture": "human.png" },
     "desert": { "texture": "desert.png" },
     "cactus": { "texture": "cactus.png" },
+    "philosophy": { "texture": "brain.png" },
+    "hour glass": { "texture": "hourglass.png" },
     "stone": { "texture": "stone.png" }
 }
