@@ -59,8 +59,8 @@ button {
 }
 
 .element {
-    width: 80px;
-    height: 80px;
+    width: 72px;
+    height: 72px;
     margin: 10px;
     display: flex;
     justify-content: center;

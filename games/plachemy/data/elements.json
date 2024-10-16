@@ -40,5 +40,9 @@
     "tool": { "texture": "tool.png" },
     "axe": { "texture": "axe.png" },
     "wood": { "texture": "wood.png" },
+    "obsidian": { "texture": "obsidian.png" },
+    "earthquake": { "texture": "earthquake.png" },
+    "mountain": { "texture": "mountain.png" },
+    "volcano": { "texture": "volcano.png" },
     "stone": { "texture": "stone.png" }
 }
