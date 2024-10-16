@@ -44,5 +44,9 @@
     "earthquake": { "texture": "earthquake.png" },
     "mountain": { "texture": "mountain.png" },
     "volcano": { "texture": "volcano.png" },
+    "opposite": { "texture": "opposite.png" },
+    "up": { "texture": "up.png" },
+    "down": { "texture": "down.png" },
+    "cold": { "texture": "cold.png" },
     "stone": { "texture": "stone.png" }
 }
