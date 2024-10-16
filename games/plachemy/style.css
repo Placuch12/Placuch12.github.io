@@ -15,6 +15,14 @@ body {
     margin: 20px 0;
 }
 
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    flex-direction: column;
+}
+
 .clear {
     display: flex;
     justify-content: center;
