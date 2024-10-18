@@ -40,7 +40,7 @@ function renderElements() {
 function updateProgress() {
     const totalElements = Object.keys(elementsData).length;
     const unlockedCount = unlockedElements.length;
-    progressDisplay.textContent = `https://placuch12.github.io/games/plachemy/data/combinations.json Elements: ${unlockedCount}/${totalElements}`;
+    progressDisplay.textContent = `<a href="https://placuch12.github.io/games/plachemy/data/combinations.json" target="_blank">Combinations</a> Elements: ${unlockedCount}/${totalElements}`;
 }
 
 function selectElement(element) {
