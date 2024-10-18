@@ -47,5 +47,7 @@
     { "elements": ["steam", "philosophy"], "result": "up" },
     { "elements": ["up", "down"], "result": "opposite" },
     { "elements": ["heat", "opposite"], "result": "cold" },
+    { "elements": ["cold", "water"], "result": "ice" },
+    { "elements": ["heat", "water"], "result": "steam" },
     { "elements": ["rain", "energy"], "result": "storm" }
 ]
