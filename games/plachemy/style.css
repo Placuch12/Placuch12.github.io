@@ -10,6 +10,8 @@ body {
 
 #links {
     height:5vh;
+    top: 50%;
+    left: 50%;
 }
 
 .combiner {
