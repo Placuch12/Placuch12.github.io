@@ -8,6 +8,10 @@ body {
     padding: 0;
 }
 
+#links {
+    height:5vh;
+}
+
 .combiner {
     display: flex;
     justify-content: center;
