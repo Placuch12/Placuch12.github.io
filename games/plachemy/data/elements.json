@@ -48,6 +48,6 @@
     "up": { "texture": "up.png" },
     "down": { "texture": "down.png" },
     "cold": { "texture": "cold.png" },
-    "ice": { "texture": "placeholder.png" },
+    "ice": { "texture": "ice.png" },
     "stone": { "texture": "stone.png" }
 }
