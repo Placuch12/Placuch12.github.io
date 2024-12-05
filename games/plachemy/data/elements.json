@@ -55,5 +55,6 @@
     "river": { "texture": "river.png" },
     "canyon": { "texture": "canyon.png" },
     "hole": { "texture": "hole.png" },
+    "cave": { "texture": "cave.png" },
     "stone": { "texture": "stone.png" }
 }

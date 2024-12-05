@@ -53,5 +53,7 @@
     { "elements": ["mountain", "water"], "result": "river" },
     { "elements": ["time", "river"], "result": "canyon" },
     { "elements": ["canyon", "philosophy"], "result": "hole" },
+    { "elements": ["land", "hole"], "result": "cave" },
+    { "elements": ["cave", "pickaxe"], "result": "ore" },
     { "elements": ["rain", "energy"], "result": "storm" }
 ]
