@@ -49,5 +49,11 @@
     "down": { "texture": "down.png" },
     "cold": { "texture": "cold.png" },
     "ice": { "texture": "ice.png" },
+    "metal": { "texture": "phold_ingot.png" },
+    "ore": { "texture": "ore.png" },
+    "pickaxe": { "texture": "pickaxe.png" },
+    "river": { "texture": "river.png" },
+    "canyon": { "texture": "canyon.png" },
+    "hole": { "texture": "hole.png" },
     "stone": { "texture": "stone.png" }
 }

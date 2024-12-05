@@ -49,5 +49,9 @@
     { "elements": ["heat", "opposite"], "result": "cold" },
     { "elements": ["cold", "water"], "result": "ice" },
     { "elements": ["heat", "water"], "result": "steam" },
+    { "elements": ["stone", "tool"], "result": "pickaxe" },
+    { "elements": ["mountain", "water"], "result": "river" },
+    { "elements": ["time", "river"], "result": "canyon" },
+    { "elements": ["canyon", "philosophy"], "result": "hole" },
     { "elements": ["rain", "energy"], "result": "storm" }
 ]
