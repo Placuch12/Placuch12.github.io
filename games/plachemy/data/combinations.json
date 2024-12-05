@@ -55,5 +55,6 @@
     { "elements": ["canyon", "philosophy"], "result": "hole" },
     { "elements": ["land", "hole"], "result": "cave" },
     { "elements": ["cave", "pickaxe"], "result": "ore" },
+    { "elements": ["ore", "fire"], "result": "metal" },
     { "elements": ["rain", "energy"], "result": "storm" }
 ]
