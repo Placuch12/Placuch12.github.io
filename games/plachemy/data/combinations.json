@@ -56,5 +56,9 @@
     { "elements": ["land", "hole"], "result": "cave" },
     { "elements": ["cave", "pickaxe"], "result": "ore" },
     { "elements": ["ore", "fire"], "result": "metal" },
+    { "elements": ["opposite", "big"], "result": "small" },
+    { "elements": ["small", "animal"], "result": "insect" },
+    { "elements": ["land", "sea"], "result": "insect" },
+    { "elements": ["land", "ocean"], "result": "beach" },
     { "elements": ["rain", "energy"], "result": "storm" }
 ]
