@@ -75,5 +75,7 @@
     { "elements": ["charcoal", "brick"], "result": "kiln" },
     { "elements": ["tree", "tree"], "result": "forest" },
     { "elements": ["tree", "land"], "result": "forest" },
+    { "elements": ["air", "energy"], "result": "wind" },
+    { "elements": ["air", "pressure"], "result": "wind" },
     { "elements": ["rain", "energy"], "result": "storm" }
 ]
