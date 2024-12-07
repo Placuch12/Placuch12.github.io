@@ -3,9 +3,17 @@
     --background-color: #ffffff;
     --button-color: #efefef;
     --container-color: #f0f0f0;
-    --element-color: #f4f4f4;
     --border-color: #cccccc;
-    --progress-color: #333333;
+    --text-color: #333333;
+}
+
+.darkmode{
+    --circle-color: #e3e3e3;
+    --background-color: #1e1e1e;
+    --button-color: #1f1f1f;
+    --container-color: #3d3d3d;
+    --border-color: #eeeeee;
+    --text-color: #dcdcdc;
 }
 
 body {
@@ -88,7 +96,7 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--element-color);
+    background-color: var(--container-color);
     border: 1px solid var(--border-color);
     cursor: pointer;
 }
