@@ -1,6 +1,7 @@
 :root{
     --circle-color: #d3d3d3;
     --background-color: #ffffff;
+    --button-color: #efefef;
     --container-color: #f0f0f0;
     --element-color: #f4f4f4;
     --border-color: #cccccc;
@@ -66,6 +67,7 @@ body {
 button {
     font-size: 24px;
     padding: 10px 20px;
+    background-color: var(--button-color);
 }
 
 .element-container {
