@@ -60,5 +60,9 @@
     { "elements": ["small", "animal"], "result": "insect" },
     { "elements": ["land", "sea"], "result": "insect" },
     { "elements": ["land", "ocean"], "result": "beach" },
+    { "elements": ["small", "sea"], "result": "lake" },
+    { "elements": ["small", "ocean"], "result": "sea" },
+    { "elements": ["big", "lake"], "result": "sea" },
+    { "elements": ["big", "sea"], "result": "ocean" },
     { "elements": ["rain", "energy"], "result": "storm" }
 ]
