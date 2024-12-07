@@ -8,7 +8,7 @@
 }
 
 .darkmode{
-    --circle-color: #e3e3e3;
+    --circle-color: #3d3d3d;
     --background-color: #1e1e1e;
     --button-color: #1f1f1f;
     --container-color: #3d3d3d;
@@ -76,6 +76,7 @@ button {
     font-size: 24px;
     padding: 10px 20px;
     background-color: var(--button-color);
+    color: var(--text-color);
 }
 
 .element-container {
@@ -118,4 +119,14 @@ button {
 
 body {
     position: relative;
+}
+
+#themeSwitch {
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    font-size: 24px;
+    padding: 10px 20px;
+    background-color: var(--button-color);
+    color: var(--text-color);
 }
