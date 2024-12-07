@@ -61,5 +61,8 @@
     "beach": { "texture": "beach.png" },
     "lake": { "texture": "lake.png" },
     "island": { "texture": "island.png" },
+    "charcoal": { "texture": "charcoal.png" },
+    "smoke": { "texture": "smoke.png" },
+    "kiln": { "texture": "kiln.png" },
     "stone": { "texture": "stone.png" }
 }

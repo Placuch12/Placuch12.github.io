@@ -68,5 +68,9 @@
     { "elements": ["big", "sea"], "result": "ocean" },
     { "elements": ["volcano", "sea"], "result": "island" },
     { "elements": ["volcano", "ocean"], "result": "island" },
+    { "elements": ["wood", "fire"], "result": "charcoal" },
+    { "elements": ["charcoal", "fire"], "result": "smoke" },
+    { "elements": ["charcoal", "clay"], "result": "kiln" },
+    { "elements": ["charcoal", "brick"], "result": "kiln" },
     { "elements": ["rain", "energy"], "result": "storm" }
 ]
