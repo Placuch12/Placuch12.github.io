@@ -61,6 +61,7 @@ combineBtn.onclick = () => {
         });
 
         if (combination && !unlockedElements.includes(combination.result)) {
+            console.log(combination.result);
             unlockedElements.push(combination.result);
             updateProgress();
         }
