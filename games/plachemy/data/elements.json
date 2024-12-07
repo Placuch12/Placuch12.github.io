@@ -64,5 +64,6 @@
     "charcoal": { "texture": "charcoal.png" },
     "smoke": { "texture": "smoke.png" },
     "kiln": { "texture": "kiln.png" },
+    "forest": { "texture": "forest.png" },
     "stone": { "texture": "stone.png" }
 }

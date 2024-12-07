@@ -20,6 +20,7 @@
     { "elements": ["stone", "air"], "result": "sand" },
     { "elements": ["sand", "fire"], "result": "glass" },
     { "elements": ["earth", "life"], "result": "animal" },
+    { "elements": ["land", "life"], "result": "animal" },
     { "elements": ["animal", "plant"], "result": "nature" },
     { "elements": ["brick", "brick"], "result": "wall" },
     { "elements": ["wall", "wall"], "result": "house" },
@@ -72,5 +73,7 @@
     { "elements": ["charcoal", "fire"], "result": "smoke" },
     { "elements": ["charcoal", "clay"], "result": "kiln" },
     { "elements": ["charcoal", "brick"], "result": "kiln" },
+    { "elements": ["tree", "tree"], "result": "forest" },
+    { "elements": ["tree", "land"], "result": "forest" },
     { "elements": ["rain", "energy"], "result": "storm" }
 ]
