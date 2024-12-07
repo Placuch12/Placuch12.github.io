@@ -60,5 +60,6 @@
     "insect": { "texture": "ant.png" },
     "beach": { "texture": "beach.png" },
     "lake": { "texture": "lake.png" },
+    "island": { "texture": "island.png" },
     "stone": { "texture": "stone.png" }
 }
