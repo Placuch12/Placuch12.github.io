@@ -120,13 +120,3 @@ button {
 body {
     position: relative;
 }
-
-#themeSwitch {
-    position: absolute;
-    top: 30px;
-    right: 10px;
-    font-size: 24px;
-    padding: 10px 20px;
-    background-color: var(--button-color);
-    color: var(--text-color);
-}
