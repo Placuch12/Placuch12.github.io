@@ -66,5 +66,9 @@
     "kiln": { "texture": "kiln.png" },
     "forest": { "texture": "forest.png" },
     "wind": { "texture": "wind.png" },
+    "village": { "texture": "village.png" },
+    "city": { "texture": "city.png" },
+    "country": { "texture": "country.png" },
+    "continent": { "texture": "continent.png" },
     "stone": { "texture": "stone.png" }
 }
