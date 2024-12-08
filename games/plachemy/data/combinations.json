@@ -81,5 +81,6 @@
     { "elements": ["village", "village"], "result": "city" },
     { "elements": ["city", "city"], "result": "country" },
     { "elements": ["country", "country"], "result": "continent" },
+    { "elements": ["continent", "continent"], "result": "planet" },
     { "elements": ["rain", "energy"], "result": "storm" }
 ]

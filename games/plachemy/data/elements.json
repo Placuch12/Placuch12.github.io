@@ -70,5 +70,6 @@
     "city": { "texture": "city.png" },
     "country": { "texture": "country.png" },
     "continent": { "texture": "continent.png" },
+    "planet": { "texture": "planet.png" },
     "stone": { "texture": "stone.png" }
 }
