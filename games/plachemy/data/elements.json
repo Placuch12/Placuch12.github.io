@@ -71,5 +71,7 @@
     "country": { "texture": "country.png" },
     "continent": { "texture": "continent.png" },
     "planet": { "texture": "planet.png" },
+    "sawdust": { "texture": "sawdust.png" },
+    "paper": { "texture": "paper.png" },
     "stone": { "texture": "stone.png" }
 }

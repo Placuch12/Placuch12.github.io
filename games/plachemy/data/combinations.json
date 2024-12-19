@@ -82,5 +82,7 @@
     { "elements": ["city", "city"], "result": "country" },
     { "elements": ["country", "country"], "result": "continent" },
     { "elements": ["continent", "continent"], "result": "planet" },
+    { "elements": ["wood", "dust"], "result": "sawdust" },
+    { "elements": ["sawdust", "pressure"], "result": "paper" },
     { "elements": ["rain", "energy"], "result": "storm" }
 ]
