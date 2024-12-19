@@ -77,5 +77,6 @@
     "cow": { "texture": "cow.png" },
     "domesticated animal": { "texture": "domesticated_animal.png" },
     "death": { "texture": "skull.png" },
+    "adding this element just to keep track of when github updates": { "texture": "placeholder.png" },
     "stone": { "texture": "stone.png" }
 }
