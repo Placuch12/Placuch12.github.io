@@ -1,6 +1,8 @@
 const elementContainer = document.getElementById('elementContainer');
 const element1Display = document.getElementById('element1');
 const element2Display = document.getElementById('element2');
+const element1Text = document.getElementById('elementI');
+const element2Text = document.getElementById('elementII');
 const combineBtn = document.getElementById('combineBtn');
 const clearBtn = document.getElementById('clearBtn');
 const progressDisplay = document.getElementById('progressDisplay');
@@ -47,9 +49,11 @@ function selectElement(element) {
     if (!selectedElement1) {
         selectedElement1 = element;
         element1Display.innerHTML = `<img src="assets/${elementsData[element].texture}" alt="${element}" title="${element}" style="width: 120px; height: 120px; object-fit: contain;">`;
+        element1Text.innerHTML = element;
     } else if (!selectedElement2) {
         selectedElement2 = element;
         element2Display.innerHTML = `<img src="assets/${elementsData[element].texture}" alt="${element}" title="${element}" style="width: 120px; height: 120px; object-fit: contain; image-rendering: pixelated;">`;
+        element2Text.innerHTML = element;
     }
 }
 
@@ -69,6 +73,8 @@ combineBtn.onclick = () => {
         selectedElement2 = null;
         element1Display.innerHTML = ' ';
         element2Display.innerHTML = ' ';
+        element1Text.innerHTML = ' ';
+        element2Text.innerHTML = ' ';
 
         renderElements();
     }
@@ -79,6 +85,8 @@ clearBtn.onclick = () => {
     selectedElement2 = null;
     element1Display.innerHTML = ' ';
     element2Display.innerHTML = ' ';
+    element1Text.innerHTML = ' ';
+    element2Text.innerHTML = ' ';
 
     renderElements();
 };

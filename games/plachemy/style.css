@@ -43,6 +43,7 @@ body {
 .buttons {
     display: flex;
     flex-direction: column;
+    margin-bottom: 40px;
 }
 
 .clear {
@@ -62,6 +63,13 @@ body {
     align-items: center;
     font-size: 18px;
     margin: 0 20px;
+    margin-bottom: 10px;
+}
+
+.text {
+    font-size: 28px;
+    color: var(--text-color);
+    text-align: center;
 }
 
 .circle img {
@@ -114,7 +122,7 @@ button {
     top: 10px;
     right: 10px;
     font-size: 18px;
-    color: var(--progress-color);
+    color: var(--text-color);
 }
 
 body {
