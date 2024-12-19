@@ -38,6 +38,7 @@ body {
     justify-content: center;
     align-items: center;
     margin: 20px 0;
+    width: 317px;
 }
 
 .buttons {
@@ -97,7 +98,6 @@ button {
     height: 50%;
     overflow-y: scroll;
     align-content: start;
-    width: 317px
 }
 
 .element {
