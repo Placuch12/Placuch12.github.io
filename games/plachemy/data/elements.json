@@ -76,5 +76,6 @@
     "grass": { "texture": "grass.png" },
     "cow": { "texture": "cow.png" },
     "domesticated animal": { "texture": "domesticated_animal.png" },
+    "death": { "texture": "skull.png" },
     "stone": { "texture": "stone.png" }
 }

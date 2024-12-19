@@ -88,5 +88,6 @@
     { "elements": ["earth", "plant"], "result": "paper" },
     { "elements": ["human", "animal"], "result": "domesticated animal" },
     { "elements": ["domesticated animal", "grass"], "result": "cow" },
+    { "elements": ["opposite", "life"], "result": "death" },
     { "elements": ["rain", "energy"], "result": "storm" }
 ]
