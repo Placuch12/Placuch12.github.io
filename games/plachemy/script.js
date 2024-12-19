@@ -73,8 +73,8 @@ combineBtn.onclick = () => {
         selectedElement2 = null;
         element1Display.innerHTML = ' ';
         element2Display.innerHTML = ' ';
-        element1Text.innerHTML = '​';
-        element2Text.innerHTML = '​';
+        element1Text.innerHTML = '-';
+        element2Text.innerHTML = '-';
 
         renderElements();
     }
@@ -85,8 +85,8 @@ clearBtn.onclick = () => {
     selectedElement2 = null;
     element1Display.innerHTML = ' ';
     element2Display.innerHTML = ' ';
-    element1Text.innerHTML = '​';
-    element2Text.innerHTML = '​';
+    element1Text.innerHTML = '-';
+    element2Text.innerHTML = '-';
 
     renderElements();
 };
