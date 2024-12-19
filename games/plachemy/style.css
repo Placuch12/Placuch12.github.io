@@ -71,8 +71,6 @@ body {
     color: var(--text-color);
     text-align: center;
     text-transform: capitalize;
-    overflow-wrap: break-word;
-    hyphens: manual;
 }
 
 .circle img {
@@ -99,6 +97,7 @@ button {
     height: 50%;
     overflow-y: scroll;
     align-content: start;
+    width: 317px
 }
 
 .element {
