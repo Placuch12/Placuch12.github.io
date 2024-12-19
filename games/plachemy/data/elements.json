@@ -70,7 +70,7 @@
     "city": { "texture": "city.png" },
     "country": { "texture": "country.png" },
     "continent": { "texture": "continent.png" },
-    "planet": { "texture": "planet.png" },
+    "planet": { "texture": "earth_planet.png" },
     "sawdust": { "texture": "sawdust.png" },
     "paper": { "texture": "paper.png" },
     "grass": { "texture": "grass.png" },
