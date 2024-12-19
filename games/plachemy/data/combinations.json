@@ -15,6 +15,7 @@
     { "elements": ["fire", "clay"], "result": "brick" },
     { "elements": ["rain", "earth"], "result": "plant" },
     { "elements": ["plant", "mud"], "result": "swamp" },
+    { "elements": ["grass", "mud"], "result": "swamp" },
     { "elements": ["sea", "sea"], "result": "ocean" },
     { "elements": ["swamp", "energy"], "result": "life" },
     { "elements": ["stone", "air"], "result": "sand" },
@@ -84,5 +85,8 @@
     { "elements": ["continent", "continent"], "result": "planet" },
     { "elements": ["wood", "dust"], "result": "sawdust" },
     { "elements": ["sawdust", "pressure"], "result": "paper" },
+    { "elements": ["earth", "plant"], "result": "paper" },
+    { "elements": ["human", "animal"], "result": "domesticated animal" },
+    { "elements": ["domesticated animal", "grass"], "result": "cow" },
     { "elements": ["rain", "energy"], "result": "storm" }
 ]

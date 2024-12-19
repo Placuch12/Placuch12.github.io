@@ -73,5 +73,8 @@
     "planet": { "texture": "planet.png" },
     "sawdust": { "texture": "sawdust.png" },
     "paper": { "texture": "paper.png" },
+    "grass": { "texture": "grass.png" },
+    "cow": { "texture": "cow.png" },
+    "domesticated animal": { "texture": "domesticated_animal.png" },
     "stone": { "texture": "stone.png" }
 }
