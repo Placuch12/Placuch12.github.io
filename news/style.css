@@ -91,3 +91,7 @@ button {
 button:hover {
     background-color: #333;
 }
+
+footer {
+    text-align: center
+}
