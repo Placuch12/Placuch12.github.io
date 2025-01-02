@@ -1,0 +1,14 @@
+[
+    {
+        "image": "images/city.png",
+        "headline": "Breaking News: Major Event Happens",
+        "text": "''The major event has been found to be rather major'' - says mayor Major.",
+        "date": "2025-01-01"
+    },
+    {
+        "image": "images/lab.png",
+        "headline": "New gadget discovered by team of international scientists",
+        "text": "A group of ten scientists from all over Europe have been working on a peculiar gadget for the past few months. ''Professor Stim hasn't left his lab since the final version of the gadget has been released'' - says Professor G. T.",
+        "date": "2025-01-02"
+    }
+]
