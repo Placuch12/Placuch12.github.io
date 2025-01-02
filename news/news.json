@@ -1,9 +1,11 @@
 [
     {
-        "image": "images/city.png",
-        "headline": "Breaking News: Major Event Happens",
-        "text": "\"The major event has been found to be rather major\" - says mayor Major.",
-        "date": "2025-01-01"
+        "image": "images/radishes.png",
+        "headline": "Radish harvests in Lower Silesia higher than ever before",
+        "text": "Lower Silesian farmers celebrating a record-breaking radish harvest, local markets filled with produce, radish enthusiasts overjoyed.
+
+\"I don't care\" - said Stjepan Kovaèeviæ, a random citizen of Zagreb, Croatia when interviewed on the street.",
+        "date": "2013-05-23"
     },
     {
         "image": "images/lab.png",
