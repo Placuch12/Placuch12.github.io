@@ -2,7 +2,7 @@
     {
         "image": "images/radishes.png",
         "headline": "Radish harvests in Lower Silesia higher than ever before",
-        "text": "Lower Silesian farmers celebrating a record-breaking radish harvest, local markets filled with produce, radish enthusiasts overjoyed.<br><br>\"I don't care\" - said Stjepan Horvat, a random citizen of Zagreb, Croatia when interviewed on the street.",
+        "text": "Lower Silesian farmers celebrating a record-breaking radish harvest, local markets filled with produce, radish enthusiasts overjoyed.<br><br>\"I don't care\" - said Stjepan Horvat, a random citizen of Zagreb, Croatia, when interviewed on the street.",
         "date": "2013-05-23"
     },
     {
@@ -16,5 +16,17 @@
         "headline": "Local lump of bones starts talking",
         "text": "\"Damn, I haven't talked here since last year\" - said the sentient lump of bones.",
         "date": "2025-01-02"
+    },
+    {
+        "image": "images/hospital_baby_room.png",
+        "headline": "Birth rate of people born in 2024 has rapidly declined in just a single day",
+        "text": "Experts baffled as the birth rate of people born in 2024 statistic rapidly dropped to 0 in the midnight between 31st of December 2024 and 1st of January 2025.",
+        "date": "2025-01-01"
+    },
+    {
+        "image": "images/poll.png",
+        "headline": "Poll shows that nearly 100% of people are alright with answering polls",
+        "text": "After conducting a research, our journalist have concluded that 100% of people are willing to answer a poll according to research done in various major cities.",
+        "date": "2019-09-22"
     }
 ]
