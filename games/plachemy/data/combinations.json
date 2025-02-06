@@ -89,7 +89,7 @@
     { "elements": ["plant", "earth"], "result": "grass" },
     { "elements": ["domesticated animal", "grass"], "result": "cow" },
     { "elements": ["opposite", "life"], "result": "death" },
-    { "elements": ["hole", "metal"], "result": "bucket" },
+    { "elements": ["container", "water"], "result": "bucket" },
     { "elements": ["house", "philosophy"], "result": "container" },
     { "elements": ["hole", "philosophy"], "result": "container" },
     { "elements": ["kiln", "philosophy"], "result": "container" },
