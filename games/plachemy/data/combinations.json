@@ -85,7 +85,6 @@
     { "elements": ["continent", "continent"], "result": "planet" },
     { "elements": ["wood", "dust"], "result": "sawdust" },
     { "elements": ["sawdust", "pressure"], "result": "paper" },
-    { "elements": ["earth", "plant"], "result": "paper" },
     { "elements": ["human", "animal"], "result": "domesticated animal" },
     { "elements": ["plant", "earth"], "result": "grass" },
     { "elements": ["domesticated animal", "grass"], "result": "cow" },
