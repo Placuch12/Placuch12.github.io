@@ -93,5 +93,9 @@
     { "elements": ["house", "philosophy"], "result": "container" },
     { "elements": ["hole", "philosophy"], "result": "container" },
     { "elements": ["kiln", "philosophy"], "result": "container" },
+    { "elements": ["cow", "water"], "result": "milk" },
+    { "elements": ["cow", "bucket"], "result": "milk" },
+    { "elements": ["milk", "container"], "result": "bottle" },
+    { "elements": ["glass", "container"], "result": "bottle" },
     { "elements": ["rain", "energy"], "result": "storm" }
 ]

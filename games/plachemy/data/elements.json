@@ -79,5 +79,7 @@
     "death": { "texture": "skull.png" },
     "bucket": { "texture": "bucket.png" },
     "container": { "texture": "container.png" },
+    "milk": { "texture": "milk.png" },
+    "bottle": { "texture": "bottle.png" },
     "stone": { "texture": "stone.png" }
 }
