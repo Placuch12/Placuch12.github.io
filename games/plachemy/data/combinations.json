@@ -97,5 +97,7 @@
     { "elements": ["cow", "bucket"], "result": "milk" },
     { "elements": ["milk", "container"], "result": "bottle" },
     { "elements": ["glass", "container"], "result": "bottle" },
+    { "elements": ["cold", "rain"], "result": "snow" },
+    { "elements": ["plant", "human"], "result": "farmer" },
     { "elements": ["rain", "energy"], "result": "storm" }
 ]

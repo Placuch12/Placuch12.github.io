@@ -81,5 +81,7 @@
     "container": { "texture": "container.png" },
     "milk": { "texture": "milk.png" },
     "bottle": { "texture": "bottle.png" },
+    "snow": { "texture": "snow.png" },
+    "farmer": { "texture": "farmer.png" },
     "stone": { "texture": "stone.png" }
 }
