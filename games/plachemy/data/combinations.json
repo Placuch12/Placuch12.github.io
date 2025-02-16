@@ -99,5 +99,8 @@
     { "elements": ["glass", "container"], "result": "bottle" },
     { "elements": ["cold", "rain"], "result": "snow" },
     { "elements": ["plant", "human"], "result": "farmer" },
+    { "elements": ["life", "sea"], "result": "fish" },
+    { "elements": ["life", "ocean"], "result": "fish" },
+    { "elements": ["life", "water"], "result": "fish" },
     { "elements": ["rain", "energy"], "result": "storm" }
 ]

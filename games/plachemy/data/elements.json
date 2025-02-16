@@ -83,5 +83,6 @@
     "bottle": { "texture": "bottle.png" },
     "snow": { "texture": "snow.png" },
     "farmer": { "texture": "farmer.png" },
+    "fish": { "texture": "fish.png" },
     "stone": { "texture": "stone.png" }
 }
